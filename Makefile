@@ -50,6 +50,7 @@ rpm deb: | build-all
 		--exclude '*.a' --exclude 'lib/pkgconfig/zlib.pc' \
 		--description "a log shipping tool" \
 		--url "https://github.com/jordansissel/lumberjack" \
+		--before-remove prerm.sh \
 		build/bin/lumberjack=$(PREFIX)/bin/ build/bin/lumberjack.sh=$(PREFIX)/bin/ \
 		lumberjack.init=/etc/init.d/lumberjack
 
