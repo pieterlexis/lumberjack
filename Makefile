@@ -46,7 +46,7 @@ vendor-clean:
 
 rpm deb: PREFIX=/opt/lumberjack
 rpm deb: | build-all
-	fpm -s dir -t $@ -n lumberjack -v $(VERSION) \
+	fpm -s dir -t $@ -n lumberjack -v $(VERSION) --iteration "0+kumina1" \
 		--exclude '*.a' --exclude 'lib/pkgconfig/zlib.pc' \
 		--description "a log shipping tool" \
 		--url "https://github.com/jordansissel/lumberjack" \
